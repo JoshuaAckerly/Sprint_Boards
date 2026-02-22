@@ -18,7 +18,7 @@ Supporting planning content moved to `SPRINT_BOARD_APPENDIX_FEB_2026.md`.
 ## Today Snapshot
 
 - **Last Updated:** 2026-02-21
-- **Status:** 🟢 Planned and ready for Monday kickoff.
+- **Status:** 🟢 Maintenance completed; sprint ready for Monday kickoff.
 - **Carryover Posture:** Re-evaluate incomplete cards from 2026-02-27 closeout before kickoff lock.
 - **Open Risks:** VM contention during deploys, dependency regressions, and scope drift from non-priority requests.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
@@ -149,6 +149,11 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Outcome: removed moderate findings (`30 high + 1 moderate` → `30 high + 0 moderate`) while avoiding force-induced insecure Jest downgrades.
   - Validation: `npm audit --json`, `npm run types`, `npm run build`, `npm test -- --runInBand`.
   - Note: Jest ESM/import-meta runtime blocker is resolved and frontend suite now passes (`13/13` suites, `77/77` tests).
+
+- [x] **Card: Portfolio Ops — graveyardjokes test suite fixes**
+  - Outcome: fixed all failing Jest tests in graveyardjokes by updating mocks, configuration, and component tests.
+  - Validation: `npm test` passes (`6/6` suites, `15/15` tests), `npm run build` passes.
+  - Note: switched to mock components for complex dependencies; all tests now green and build stable.
 
 - [x] **Card: Portfolio Ops — synthveil remediation wave 1**
   - Outcome: reduced `synthveil` npm findings from `11 high + 1 moderate` to `7 high + 0 moderate`.

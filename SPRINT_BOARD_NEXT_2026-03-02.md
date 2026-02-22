@@ -15,8 +15,8 @@ Recommended WIP limit: **max 2 active build sites**.
 
 ## Today Snapshot
 
-- **Last Updated:** 2026-02-21
-- **Status:** 🟢 Planned and ready for Monday kickoff.
+- **Last Updated:** 2026-02-22
+- **Status:** 🚀 Sprint kicked off on 2026-02-22. Ready for execution.
 - **Carryover Posture:** Re-evaluate incomplete cards from 2026-02-27 closeout before kickoff lock.
 - **Open Risks:** VM contention during deploys, dependency regressions, and scope drift from non-priority requests.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
