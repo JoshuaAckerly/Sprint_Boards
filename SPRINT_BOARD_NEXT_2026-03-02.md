@@ -20,6 +20,7 @@ Recommended WIP limit: **max 2 active build sites**.
 - **Carryover Posture:** Re-evaluate incomplete cards from 2026-02-27 closeout before kickoff lock.
 - **Open Risks:** VM contention during deploys, dependency regressions, and scope drift from non-priority requests.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
+- **Ad-hoc Fix:** CSS/Tailwind loading issue in lunarblood and hollowpress resolved by explicitly including `app.css` in `@vite` directive.
 
 ## Locked Queue (Sprint Start)
 
