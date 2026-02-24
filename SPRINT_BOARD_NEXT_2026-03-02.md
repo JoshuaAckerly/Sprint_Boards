@@ -64,35 +64,44 @@ Recommended WIP limit: **max 2 active build sites**.
 
 RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 
-### lunarblood (Primary)
-- [x] **Card: User profile management baseline**
-  - Status: ✅ (Completed early)
+### lunarblood (Primary) - Target: 2 outcomes shipped
+- [x] **Card (8h): Enhanced venue management system**
+  - Status: ✅ Completed
   - Owner: Joshua
-- [ ] **Card: Production promotion checklist refresh**
-  - Status: ✅ (Completed early)
-  - Owner: Joshua
-- [x] **Card: Main dashboard functionality (post-MVP) — slice 1**
-  - Status: ✅ (Completed)
-  - Owner: Joshua
+  - Acceptance:
+    - [x] Venue CRUD operations fully functional
+    - [x] Venue-show relationships properly managed
+    - [x] Admin interface for venue oversight
+  - Validation: `./vendor/bin/phpunit --filter=Venue`, `npm run build`, manual testing of venue flows
 
-### hollowpress (Secondary)
-- [x] **Card: Search relevance monitoring + tuning follow-up**
-  - Status: ✅ (Completed early)
+- [ ] **Card (6h): Streamlined event creation workflow**
+  - Status: 🟢 Ready
   - Owner: Joshua
-- [x] **Card: Dashboard regression sweep (empty states + quick actions)**
-  - Status: ✅ (Completed)
-  - Owner: Joshua
+  - Acceptance:
+    - [ ] Multi-step event creation form with validation
+    - [ ] Auto-save draft functionality
+    - [ ] Preview mode before publishing
+  - Validation: `./vendor/bin/phpunit --filter=Event`, `npm run build`, end-to-end event creation test
 
-### Portfolio-wide Ops
-- [x] **Card: Dependency/vulnerability triage sweep**
-  - Status: ✅ (Completed early)
+### hollowpress (Secondary) - Target: 1 outcome shipped
+- [ ] **Card (8h): Advanced content search and filtering**
+  - Status: 🟢 Ready
   - Owner: Joshua
-- [x] **Card: Backup verification spot-check (2 sites)**
-  - Status: ✅ (Completed)
+  - Acceptance:
+    - [ ] Faceted search by category, date, author
+    - [ ] Advanced query syntax support
+    - [ ] Search result highlighting and snippets
+  - Validation: `./vendor/bin/phpunit --filter=Search`, `npm run build`, search performance benchmarks
+
+### Portfolio-wide Ops - Target: 1 reliability pass
+- [ ] **Card (6h): Cross-site performance monitoring baseline**
+  - Status: 🟢 Ready
   - Owner: Joshua
-- [x] **Card: AI usage quality review (weekly)**
-  - Status: ✅ (Completed)
-  - Owner: Joshua
+  - Acceptance:
+    - [ ] Response time monitoring for all sites
+    - [ ] Error rate tracking and alerting
+    - [ ] Database query performance analysis
+  - Validation: monitoring dashboards configured, baseline metrics captured, alert thresholds set
 
 ## Blocked
 
