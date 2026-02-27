@@ -17,7 +17,7 @@ Supporting planning content moved to `SPRINT_BOARD_APPENDIX_FEB_2026.md`.
 
 ## Today Snapshot
 
-- **Last Updated:** 2026-02-21
+- **Last Updated:** 2026-02-27
 - **Status:** 🟢 Maintenance completed; sprint ready for Monday kickoff.
 - **Carryover Posture:** Re-evaluate incomplete cards from 2026-02-27 closeout before kickoff lock.
 - **Open Risks:** VM contention during deploys, dependency regressions, and scope drift from non-priority requests.
@@ -69,7 +69,7 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 - [x] **Card: User profile management baseline**
   - Status: ✅ (Completed early)
   - Owner: Joshua
-- [ ] **Card: Production promotion checklist refresh**
+- [x] **Card: Production promotion checklist refresh**
   - Status: ✅ (Completed early)
   - Owner: Joshua
 - [ ] **Card: Main dashboard functionality (post-MVP) — slice 1**
@@ -89,11 +89,11 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 - [x] **Card: Dependency/vulnerability triage sweep**
   - Status: ✅ (Completed early)
   - Owner: Joshua
-- [ ] **Card: Backup verification spot-check (2 sites)**
-  - Status: 🟢 (Ready)
+- [x] **Card: Backup verification spot-check (2 sites)**
+  - Status: ✅ (Completed 2026-02-27)
   - Owner: Joshua
-- [ ] **Card: AI usage quality review (weekly)**
-  - Status: 🟢 (Ready)
+- [x] **Card: AI usage quality review (weekly)**
+  - Status: ✅ (Completed 2026-02-27)
   - Owner: Joshua
 
 ## Blocked
@@ -134,6 +134,16 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Outcome: completed Composer/npm audit sweep across active + maintenance sites and triaged high findings with owner/due-date notes.
   - Validation: `composer audit --format=json` + `npm audit --json` automated sweep report.
   - Path: `DEPENDENCY_VULN_TRIAGE_2026-02-21.md` (due date set: 2026-02-24 for high findings).
+
+- [x] **Card: Portfolio Ops — Backup verification spot-check (2 sites)**
+  - Outcome: verified DB visibility/connectivity for `graveyardjokes_test` (10 tables) and confirmed `lunarblood` schema tables are present (`albums`, `products`, `shows`, `tracks`, `users`, `venues`) during live DB inspection.
+  - Validation: `cd graveyardjokes && php artisan db:show --no-interaction`, `cd lunarblood && php artisan db:show --no-interaction`.
+  - Note: both checks returned without connection errors and showed expected Laravel tables for backup-readiness.
+
+- [x] **Card: Portfolio Ops — AI usage quality review (weekly)**
+  - Outcome: reviewed current sprint execution evidence quality across completed cards; AI-assisted work remains scoped and validation-first, with explicit command-level verification captured for feature, ops, and remediation cards.
+  - Validation: board audit in `Sprint_Boards/SPRINT_BOARD_TEMPLATE_FEB_2026.md` confirmed completed-card entries include reproducible validation commands (`phpunit`, `npm run build`, `npm audit`, `composer audit`, `php artisan db:show`) and concrete outcomes.
+  - Note: no rollback-triggering regressions are recorded in the reviewed entries; continue requiring command evidence before card closure.
 
 - [x] **Card: Portfolio Ops — lunarblood remediation wave 1**
   - Outcome: reduced `lunarblood` npm findings from `11 high + 1 moderate` to `7 high + 0 moderate`.
