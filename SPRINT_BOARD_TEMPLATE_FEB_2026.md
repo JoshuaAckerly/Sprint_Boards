@@ -59,7 +59,7 @@ Supporting planning content moved to `SPRINT_BOARD_APPENDIX_FEB_2026.md`.
     - [x] run Composer/npm audit pass on active/maintenance sites
     - [x] critical/high issues triaged with owner and due date
     - [x] rollback notes captured for risky updates
-  - Validation: audit output captured in `DEPENDENCY_VULN_TRIAGE_2026-02-21.md`.
+  - Validation: audit output captured in `docs/reports/2026-02/DEPENDENCY_VULN_TRIAGE_2026-02-21.md`.
 
 ## Lane: Now (This Sprint Commitments)
 
@@ -133,7 +133,7 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 - [x] **Card: Portfolio Ops — Dependency/vulnerability triage sweep**
   - Outcome: completed Composer/npm audit sweep across active + maintenance sites and triaged high findings with owner/due-date notes.
   - Validation: `composer audit --format=json` + `npm audit --json` automated sweep report.
-  - Path: `DEPENDENCY_VULN_TRIAGE_2026-02-21.md` (due date set: 2026-02-24 for high findings).
+  - Path: `docs/reports/2026-02/DEPENDENCY_VULN_TRIAGE_2026-02-21.md` (due date set: 2026-02-24 for high findings).
 
 - [x] **Card: Portfolio Ops — Backup verification spot-check (2 sites)**
   - Outcome: verified DB visibility/connectivity for `graveyardjokes_test` (10 tables) and confirmed `lunarblood` schema tables are present (`albums`, `products`, `shows`, `tracks`, `users`, `venues`) during live DB inspection.

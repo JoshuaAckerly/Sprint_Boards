@@ -58,7 +58,7 @@ Recommended WIP limit: **max 2 active build sites**.
     - [x] run Composer/npm audit pass on active/maintenance sites
     - [x] critical/high issues triaged with owner and due date
     - [x] rollback notes captured for risky updates
-  - Validation: audit output captured in `DEPENDENCY_VULN_TRIAGE_2026-02-21.md`.
+  - Validation: audit output captured in `docs/reports/2026-02/DEPENDENCY_VULN_TRIAGE_2026-02-21.md`.
 
 ## Lane: Now (This Sprint Commitments)
 
@@ -101,7 +101,7 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
     - [x] Response time monitoring for all sites
     - [x] Error rate tracking and alerting
     - [x] Database query performance analysis
-  - Validation: `bash ./portfolio-monitoring.sh true` (all 7 sites sampled, thresholds applied), baseline metrics captured in `PORTFOLIO_MONITORING_BASELINE_2026-02-27.md`
+  - Validation: `bash ./scripts/portfolio-monitoring.sh true` (all 7 sites sampled, thresholds applied), baseline metrics captured in `docs/reports/2026-02/PORTFOLIO_MONITORING_BASELINE_2026-02-27.md`
 
 ## Blocked
 
@@ -115,13 +115,13 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Status: ✅ Mitigated
   - Owner: Joshua
   - Impact: broad updates can break legacy assumptions.
-  - Mitigation: Created `DEPENDENCY_UPDATE_PROTOCOL.md` with systematic update process and pinning strategy.
+  - Mitigation: Created `docs/standards/DEPENDENCY_UPDATE_PROTOCOL.md` with systematic update process and pinning strategy.
 
 - [x] **Card: Scope creep from paused sites**
   - Status: ✅ Mitigated
   - Owner: Joshua
   - Impact: maintenance-only sites can consume flagship throughput.
-  - Mitigation: Created `SCOPE_MANAGEMENT_GUIDELINES.md` with request triage and capacity allocation rules.
+  - Mitigation: Created `docs/standards/SCOPE_MANAGEMENT_GUIDELINES.md` with request triage and capacity allocation rules.
 
 ## Done (This Sprint)
 
@@ -172,13 +172,13 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 
 - [x] **Card: Portfolio Ops — Cross-site performance monitoring baseline**
   - Outcome: hardened `portfolio-monitoring.sh` (reliable HTTP parsing, status/error tracking, DB slow-query tracking), restarted all upstream app services, and produced clean baseline metrics for all 7 sites.
-  - Validation: `bash ./manage-all-projects.sh start` then `bash ./portfolio-monitoring.sh true`; updated report at `PORTFOLIO_MONITORING_BASELINE_2026-02-27.md` (HTTP 200 across sites, 0% error rate, thresholds applied).
-  - Note: local DNS gap remains for `graveyardjokes.graveyardjokes.local` and `studio.graveyardjokes.local`; monitoring map now uses resolvable local endpoints. `lunarblood` slow-query signal was triaged as monitoring false-positive and resolved (`LUNARBLOOD_SLOW_QUERY_TRIAGE_2026-02-27.md`).
+  - Validation: `bash ./scripts/manage-all-projects.sh start` then `bash ./scripts/portfolio-monitoring.sh true`; updated report at `docs/reports/2026-02/PORTFOLIO_MONITORING_BASELINE_2026-02-27.md` (HTTP 200 across sites, 0% error rate, thresholds applied).
+  - Note: local DNS gap remains for `graveyardjokes.graveyardjokes.local` and `studio.graveyardjokes.local`; monitoring map now uses resolvable local endpoints. `lunarblood` slow-query signal was triaged as monitoring false-positive and resolved (`docs/reports/2026-02/LUNARBLOOD_SLOW_QUERY_TRIAGE_2026-02-27.md`).
 
 - [x] **Card: Portfolio Ops — Dependency/vulnerability triage sweep**
   - Outcome: completed Composer/npm audit sweep across active + maintenance sites and triaged high findings with owner/due-date notes.
   - Validation: `composer audit --format=json` + `npm audit --json` automated sweep report.
-  - Path: `DEPENDENCY_VULN_TRIAGE_2026-02-21.md` (due date set: 2026-02-24 for high findings).
+  - Path: `docs/reports/2026-02/DEPENDENCY_VULN_TRIAGE_2026-02-21.md` (due date set: 2026-02-24 for high findings).
 
 - [x] **Card: Portfolio Ops — lunarblood remediation wave 1**
   - Outcome: reduced `lunarblood` npm findings from `11 high + 1 moderate` to `7 high + 0 moderate`.
