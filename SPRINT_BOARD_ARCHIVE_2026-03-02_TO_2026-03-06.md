@@ -15,7 +15,7 @@ Recommended WIP limit: **max 2 active build sites**.
 
 ## Today Snapshot
 
-- **Last Updated:** 2026-02-27
+- **Last Updated:** 2026-03-01
 - **Status:** 🚀 Priority 1 + hollowpress + portfolio monitoring complete (infra triage resolved).
 - **Carryover Posture:** Re-evaluate incomplete cards from 2026-02-27 closeout before kickoff lock.
 - **Open Risks:** VM contention during deploys, dependency regressions, and scope drift from non-priority requests.
@@ -219,5 +219,43 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 
 - [x] 2 lunarblood cards shipped with validation evidence
 - [x] 1 hollowpress card shipped with validation evidence
-- [ ] portfolio dependency/vuln sweep completed with triage notes
+- [x] portfolio dependency/vuln sweep completed with triage notes
 - [ ] board updated for next sprint candidate queue
+
+## Next Sprint Candidate Queue (Proposed)
+
+- **Sprint Window:** 2026-03-09 → 2026-03-13
+- **Build Sites:** lunarblood (primary), hollowpress (secondary)
+- **WIP Guardrail:** max 2 active build sites; split any card > 1 day
+
+### Proposed Monday `Now` Lock (4 cards)
+
+- [ ] **Card (6h): lunarblood — Dashboard data hardening + state coverage**
+  - Acceptance:
+    - [ ] key dashboard widgets use production-shape data and avoid null-state errors
+    - [ ] explicit loading, empty, and error states for each widget block
+    - [ ] route smoke checks pass for dashboard and linked quick-action paths
+  - Validation: `npm run build`, `npm run types`, dashboard route smoke + quick-action click-through
+
+- [ ] **Card (6h): lunarblood — Search functionality baseline (phase 1)**
+  - Acceptance:
+    - [ ] searchable entity scope documented and implemented (shows + venues)
+    - [ ] no-results and loading states present
+    - [ ] basic edge-case checks pass (empty query, special chars, long query)
+  - Validation: `./vendor/bin/phpunit --filter=Search`, `npm run build`, manual search smoke checks
+
+- [ ] **Card (6h): hollowpress — Listing performance pass (query + render stability)**
+  - Acceptance:
+    - [ ] `/posts` and `/case-studies` keep pagination/query persistence stable
+    - [ ] no obvious over-fetching/over-render paths in index views
+    - [ ] before/after notes recorded for any query/render tuning
+  - Validation: `./vendor/bin/phpunit --filter=SearchRelevanceTest`, `npm run build`, manual listing smoke checks
+
+- [ ] **Card (4h): Portfolio Ops — Monitoring/error review cadence docs refresh**
+  - Acceptance:
+    - [ ] daily and weekly review schedule captured for all active/maintenance sites
+    - [ ] log paths, threshold triggers, and escalation owner listed
+    - [ ] verification checklist includes exact commands and evidence path
+  - Validation: command/path verification pass + docs review in `docs/`
+
+- [x] board updated for next sprint candidate queue
