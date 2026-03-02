@@ -127,4 +127,40 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 - [x] portfolio dependency audit addendum documented with current evidence
 - [x] 1 lunarblood card shipped with validation evidence
 - [x] 1 hollowpress card shipped with validation evidence
-- [ ] board updated for next sprint candidate queue
+- [x] board updated for next sprint candidate queue
+
+## Next Sprint Candidate Queue (Proposed)
+
+- **Sprint Window:** 2026-03-30 → 2026-04-03
+- **Build Sites:** lunarblood (primary), hollowpress (secondary)
+- **WIP Guardrail:** max 2 active build sites; split any card > 1 day
+
+### Proposed Monday `Now` Lock (4 cards)
+
+- [ ] **Card (6h): lunarblood — Dashboard search UX follow-up (saved queries + keyboard refinement)**
+  - Acceptance:
+    - [ ] preserve recent dashboard search queries for authenticated user sessions
+    - [ ] improve keyboard flow for search submit + result navigation
+    - [ ] maintain existing synonym and validation behavior
+  - Validation: `./vendor/bin/phpunit tests/Feature/DashboardSearchTest.php`, `npm run -s types`, `npm run -s build`
+
+- [ ] **Card (6h): hollowpress — Listing index rollout phase 1 (safe migrations)**
+  - Acceptance:
+    - [ ] add first-pass indexes from checkpoint recommendations with rollback-safe migration
+    - [ ] confirm `/posts` and `/case-studies` behavior unchanged after migration
+    - [ ] document before/after timing delta note in March report addendum
+  - Validation: `php artisan migrate --pretend`, `./vendor/bin/phpunit tests/Feature/SearchRelevanceTest.php`, `npm run -s build`
+
+- [ ] **Card (4h): Portfolio Ops — Cross-site perf checkpoint refresh**
+  - Acceptance:
+    - [ ] rerun lightweight endpoint timing snapshot on active + maintenance sites
+    - [ ] flag any endpoint with sustained p95 degradation trend
+    - [ ] publish checkpoint note under `docs/reports/2026-03/`
+  - Validation: portfolio monitoring script run + report update
+
+- [ ] **Card (4h): Portfolio Ops — Sprint board hygiene + archive rollover**
+  - Acceptance:
+    - [ ] archive completed board with links to all validation reports
+    - [ ] seed next `SPRINT_BOARD_NEXT` draft with locked queue and risks
+    - [ ] ensure exit criteria and owners are present before kickoff
+  - Validation: board consistency review in `Sprint_Boards` repo
