@@ -170,6 +170,11 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Validation: `npm audit --json`, `npm run types`, `npm run build`.
   - Note: remaining high findings are lint-chain transitive advisories; planned for coordinated toolchain remediation.
 
+- [x] **Card: synthveil — public UX reliability pass (loading/error + filter/pagination)**
+  - Outcome: shipped global navigation loading/error messaging, improved contact submit error handling, and added searchable/filterable/paginated `music` + `events` experiences with URL-state persistence and clear-filter controls.
+  - Validation: `npm run -s types`, `npm run -s lint`, `php artisan test --testsuite=Unit`.
+  - Paths: `synthveil/resources/js/layouts/main.tsx`, `synthveil/resources/js/pages/contact.tsx`, `synthveil/resources/js/pages/music.tsx`, `synthveil/resources/js/pages/events.tsx`, `synthveil/resources/js/components/header.tsx`, `synthveil/TODO.md`.
+
 - [x] **Card: Portfolio Ops — thevelvetpulse remediation wave 1**
   - Outcome: reduced `thevelvetpulse` npm findings from `12 high + 1 moderate` to `7 high + 0 moderate`.
   - Validation: `npm audit --json`, `npm run types`, `npm run build`.

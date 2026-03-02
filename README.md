@@ -8,6 +8,23 @@ This repository contains sprint planning and tracking documents for the 7-site p
 - `SPRINT_BOARD_TEMPLATE_*.md`: Sprint planning templates
 - `SPRINT_BOARD_APPENDIX_*.md`: Supporting documentation and appendices
 - `SPRINT_BOARD_TEMPLATE_ARCHIVE_*.md`: Archived templates for reference
+- `SPRINT_BOARD_ARCHIVE_*.md`: Archived completed sprint execution boards
+
+## Latest Archives
+
+- `SPRINT_BOARD_ARCHIVE_2026-03-16_TO_2026-03-20.md`
+- `SPRINT_BOARD_ARCHIVE_2026-03-09_TO_2026-03-13.md`
+- `SPRINT_BOARD_ARCHIVE_2026-03-02_TO_2026-03-06.md`
+
+## Current Active Board
+
+- `SPRINT_BOARD_NEXT_2026-03-23.md`
+
+## Recent Updates
+
+- **2026-03-01:** Added Synthveil public UX reliability completion entry (loading/error handling, search/filtering, pagination, URL-state persistence) to `SPRINT_BOARD_NEXT_2026-03-23.md`.
+- **2026-03-01:** Mirrored the same Synthveil completion entry into `SPRINT_BOARD_TEMPLATE_FEB_2026.md` for consistency.
+- **2026-03-01:** Synced task completion state in `synthveil/TODO.md` for loading/error handling, search/filtering, and pagination.
 
 ## Usage
 
