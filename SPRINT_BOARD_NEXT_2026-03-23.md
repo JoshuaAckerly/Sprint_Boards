@@ -47,12 +47,12 @@ Recommended WIP limit: **max 2 active build sites**.
     - [x] existing search edge-case behavior remains stable
   - Validation: `./vendor/bin/phpunit tests/Feature/DashboardSearchTest.php`, `npm run types`, `npm run build`
 
-- [ ] **Card (6h): hollowpress — Index query performance metrics checkpoint**
+- [x] **Card (6h): hollowpress — Index query performance metrics checkpoint**
   - Owner: Joshua
   - Acceptance:
-    - [ ] before/after listing query timing evidence captured for `/posts` and `/case-studies`
-    - [ ] next index candidates documented with rationale
-    - [ ] listing behavior remains stable (search, pagination, filters)
+    - [x] before/after listing query timing evidence captured for `/posts` and `/case-studies`
+    - [x] next index candidates documented with rationale
+    - [x] listing behavior remains stable (search, pagination, filters)
   - Validation: `./vendor/bin/phpunit tests/Feature/SearchRelevanceTest.php`, `npm run build`, metrics note in `docs/reports/2026-03/`
 
 ## Lane: Now (This Sprint Commitments)
@@ -78,8 +78,8 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Owner: Joshua
 
 ### hollowpress (Secondary) - Target: 1 shipped outcome
-- [ ] **Card (6h): Index query performance metrics checkpoint**
-  - Status: 🟢 Not started
+- [x] **Card (6h): Index query performance metrics checkpoint**
+  - Status: ✅ Completed
   - Owner: Joshua
 
 ## Blocked
@@ -116,10 +116,15 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Validation: `./vendor/bin/phpunit tests/Feature/DashboardSearchTest.php` (7 passed), `npm run -s types`, `npm run -s build`.
   - Paths: `lunarblood/app/Http/Controllers/DashboardController.php`, `lunarblood/resources/js/pages/dashboard.tsx`, `lunarblood/tests/Feature/DashboardSearchTest.php`.
 
+- [x] **Card: hollowpress — Index query performance metrics checkpoint**
+  - Outcome: captured before/after timing evidence for `/posts` and `/case-studies`, documented next index candidates with rationale, and confirmed listing/search/pagination behavior remains stable.
+  - Validation: `./vendor/bin/phpunit tests/Feature/SearchRelevanceTest.php` (6 passed), `npm run -s build`, benchmark checkpoint run via `php artisan tinker` HTTP-kernel timing pass.
+  - Paths: `hollowpress/docs/reports/2026-03/INDEX_QUERY_PERFORMANCE_CHECKPOINT_2026-03-01.md`.
+
 ## Friday Exit Criteria (2026-03-27)
 
 - [x] synthveil npm auditability restored (`ENOLOCK` resolved)
 - [x] portfolio dependency audit addendum documented with current evidence
 - [x] 1 lunarblood card shipped with validation evidence
-- [ ] 1 hollowpress card shipped with validation evidence
+- [x] 1 hollowpress card shipped with validation evidence
 - [ ] board updated for next sprint candidate queue
