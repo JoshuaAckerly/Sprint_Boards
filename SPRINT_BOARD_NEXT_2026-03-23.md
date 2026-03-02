@@ -39,12 +39,12 @@ Recommended WIP limit: **max 2 active build sites**.
     - [x] monthly March triage evidence updated
   - Validation: portfolio audit command sweep + report update in `docs/reports/2026-03/`
 
-- [ ] **Card (6h): lunarblood — Dashboard search quality pass (query synonyms + empty-state polish)**
+- [x] **Card (6h): lunarblood — Dashboard search quality pass (query synonyms + empty-state polish)**
   - Owner: Joshua
   - Acceptance:
-    - [ ] at least one synonym/term quality refinement implemented for practical search queries
-    - [ ] empty/no-result messaging polished without changing page scope
-    - [ ] existing search edge-case behavior remains stable
+    - [x] at least one synonym/term quality refinement implemented for practical search queries
+    - [x] empty/no-result messaging polished without changing page scope
+    - [x] existing search edge-case behavior remains stable
   - Validation: `./vendor/bin/phpunit tests/Feature/DashboardSearchTest.php`, `npm run types`, `npm run build`
 
 - [ ] **Card (6h): hollowpress — Index query performance metrics checkpoint**
@@ -73,8 +73,8 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Owner: Joshua
 
 ### lunarblood (Primary) - Target: 1 shipped outcome
-- [ ] **Card (6h): Dashboard search quality pass (query synonyms + empty-state polish)**
-  - Status: 🟢 Not started
+- [x] **Card (6h): Dashboard search quality pass (query synonyms + empty-state polish)**
+  - Status: ✅ Completed
   - Owner: Joshua
 
 ### hollowpress (Secondary) - Target: 1 shipped outcome
@@ -111,10 +111,15 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Validation: `npm run -s types`, `npm run -s lint`, `php artisan test --testsuite=Unit`.
   - Paths: `synthveil/resources/js/layouts/main.tsx`, `synthveil/resources/js/pages/contact.tsx`, `synthveil/resources/js/pages/music.tsx`, `synthveil/resources/js/pages/events.tsx`, `synthveil/resources/js/components/header.tsx`, `synthveil/TODO.md`.
 
+- [x] **Card: lunarblood — Dashboard search quality pass (query synonyms + empty-state polish)**
+  - Outcome: improved dashboard search with practical synonym term expansion (`gig`, `concert`, `ticket`, location shorthand) and polished no-result messaging with clearer guidance and reset action.
+  - Validation: `./vendor/bin/phpunit tests/Feature/DashboardSearchTest.php` (7 passed), `npm run -s types`, `npm run -s build`.
+  - Paths: `lunarblood/app/Http/Controllers/DashboardController.php`, `lunarblood/resources/js/pages/dashboard.tsx`, `lunarblood/tests/Feature/DashboardSearchTest.php`.
+
 ## Friday Exit Criteria (2026-03-27)
 
 - [x] synthveil npm auditability restored (`ENOLOCK` resolved)
 - [x] portfolio dependency audit addendum documented with current evidence
-- [ ] 1 lunarblood card shipped with validation evidence
+- [x] 1 lunarblood card shipped with validation evidence
 - [ ] 1 hollowpress card shipped with validation evidence
 - [ ] board updated for next sprint candidate queue
