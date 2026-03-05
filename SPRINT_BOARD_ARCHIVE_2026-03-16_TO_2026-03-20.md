@@ -21,6 +21,12 @@ Recommended WIP limit: **max 2 active build sites**.
 - **Open Risks:** dependency regressions, local service/proxy drift causing false monitoring alarms, scope creep from maintenance asks.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
 
+## Weekly Workload Summary
+
+- **Locked Workload:** 20h
+- **Delivered Workload:** 26h
+- **Variance:** +6h
+
 ## Locked Queue (Sprint Start)
 
 - [x] **Card (4h): Portfolio Ops — Service/process health triage for cross-site 502/timeout baseline runs**

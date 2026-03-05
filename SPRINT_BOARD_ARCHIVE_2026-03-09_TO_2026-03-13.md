@@ -21,6 +21,12 @@ Recommended WIP limit: **max 2 active build sites**.
 - **Open Risks:** dependency regressions during updates, scope drift from maintenance requests, and deploy contention.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
 
+## Weekly Workload Summary
+
+- **Locked Workload:** 22h
+- **Delivered Workload:** 22h
+- **Variance:** 0h
+
 ## Locked Queue (Sprint Start)
 
 - [x] **Card (6h): lunarblood — Dashboard data hardening + state coverage**

@@ -22,6 +22,12 @@ Recommended WIP limit: **max 2 active build sites**.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
 - **Ad-hoc Fix:** CSS/Tailwind loading issue in lunarblood and hollowpress resolved by explicitly including `app.css` in `@vite` directive. CSP updated to allow Bunny Fonts stylesheets and http for local development. Added dashboard link to nav for authenticated users in lunarblood.
 
+## Weekly Workload Summary
+
+- **Locked Workload:** 20h
+- **Delivered Workload:** 28h
+- **Variance:** +8h
+
 ## Locked Queue (Sprint Start)
 
 - [x] **Card (6h): lunarblood — User profile management baseline**

@@ -3,6 +3,8 @@
 Use this as your weekly operating board for the 7-site portfolio.
 Recommended WIP limit: **max 2 active build sites**.
 
+> **Planning Note (2026-03-03):** Active date-aligned execution board is `SPRINT_BOARD_NEXT_2026-03-03.md`. Keep this board as a future-week planning reference.
+
 ## Current Sprint
 
 - **Sprint Window:** 2026-03-23 → 2026-03-27
@@ -15,8 +17,8 @@ Recommended WIP limit: **max 2 active build sites**.
 
 ## Today Snapshot
 
-- **Last Updated:** 2026-03-01
-- **Status:** 🟢 Kickoff-ready draft generated from prior sprint closeout queue.
+- **Last Updated:** 2026-03-03
+- **Status:** 🟡 Future-week planning reference (active execution moved to `SPRINT_BOARD_NEXT_2026-03-03.md`).
 - **Carryover Posture:** Prioritize auditability and evidence-first ops cards before optional feature expansion.
 - **Open Risks:** dependency regressions during updates and scope creep from maintenance requests.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
