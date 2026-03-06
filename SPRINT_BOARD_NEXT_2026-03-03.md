@@ -15,9 +15,9 @@ Recommended WIP limit: **max 2 active build sites**.
 
 ## Today Snapshot
 
-- **Last Updated:** 2026-03-03
-- **Status:** 🟢 Date-aligned board is active for the current week.
-- **Carryover Posture:** Use buffer before introducing any extra feature work.
+- **Last Updated:** 2026-03-06
+- **Status:** ✅ Sprint closeout complete; archive and next-week draft are ready.
+- **Carryover Posture:** 0h locked-card carryover; keep ops buffer discipline in the next lock.
 - **Open Risks:** unplanned maintenance requests and dependency regressions.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
 
@@ -48,13 +48,19 @@ Recommended WIP limit: **max 2 active build sites**.
 
 ## Friday Exit Check (Weekly)
 
-- [ ] Committed workload delivered (or variance documented)
-- [ ] Carryover measured in hours
-- [ ] Next week committed load adjusted from carryover
-- [ ] Risks and blocker posture updated before Monday lock
+- [x] Committed workload delivered (or variance documented)
+- [x] Carryover measured in hours
+- [x] Next week committed load adjusted from carryover
+- [x] Risks and blocker posture updated before Monday lock
 
 ## Execution Updates (2026-03-06)
 
 - **graveyardjokes maintenance delivery completed:** shipped pre-payment intake questionnaire + package-gated checkout flow, added Laravel feature tests and React/Jest coverage, and stabilized Jest config.
 - **Validation evidence:** `php artisan test tests/Feature/WebsiteIntakeTest.php` (pass), `npm test -- --coverage` (17/17 suites, 80/80 tests), `npm run types` (pass).
 - **Reference commit:** `abc8880` on `graveyardjokes/main`.
+
+## Rollover Notes (2026-03-06)
+
+- **Archive board finalized:** `SPRINT_BOARD_ARCHIVE_2026-03-02_TO_2026-03-06.md` updated with Friday exit closure and validation report index.
+- **Next board seeded:** `SPRINT_BOARD_NEXT_2026-03-09.md` drafted with locked queue, owners, risks, and exit criteria.
+- **Validation reports indexed:** `docs/reports/2026-03/SYNTHVEIL_NPM_AUDITABILITY_RESTORE_2026-03-01.md`, `docs/reports/2026-03/DEPENDENCY_AUDIT_ADDENDUM_2026-03-01.md`, `hollowpress/docs/reports/2026-03/INDEX_QUERY_PERFORMANCE_CHECKPOINT_2026-03-01.md`.

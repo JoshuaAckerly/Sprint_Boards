@@ -23,10 +23,11 @@ This repository contains sprint planning and tracking documents for the 7-site p
 
 ## Current Active Board
 
-- `SPRINT_BOARD_NEXT_2026-03-03.md`
+- `SPRINT_BOARD_NEXT_2026-03-09.md`
 
 ## Recent Updates
 
+- **2026-03-06:** Completed sprint board hygiene + archive rollover: closed `SPRINT_BOARD_NEXT_2026-03-03.md`, finalized `SPRINT_BOARD_ARCHIVE_2026-03-02_TO_2026-03-06.md` validation index, and seeded `SPRINT_BOARD_NEXT_2026-03-09.md` for Monday kickoff.
 - **2026-03-06:** Added completed graveyardjokes pre-payment intake + checkout gate execution notes and validation evidence to `SPRINT_BOARD_ARCHIVE_2026-03-02_TO_2026-03-06.md` and `SPRINT_BOARD_NEXT_2026-03-03.md`.
 - **2026-03-03:** Added April 2026 monthly rollup placeholder line in `README.md` for next-month tracking readiness.
 - **2026-03-03:** Added March archived-weeks workload rollup to `README.md` (62h locked / 76h delivered / +14h variance).

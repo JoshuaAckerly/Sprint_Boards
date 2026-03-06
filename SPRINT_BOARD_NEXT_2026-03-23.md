@@ -3,7 +3,7 @@
 Use this as your weekly operating board for the 7-site portfolio.
 Recommended WIP limit: **max 2 active build sites**.
 
-> **Planning Note (2026-03-03):** Active date-aligned execution board is `SPRINT_BOARD_NEXT_2026-03-03.md`. Keep this board as a future-week planning reference.
+> **Planning Note (2026-03-06):** Active date-aligned execution board is `SPRINT_BOARD_NEXT_2026-03-09.md`. Keep this board as a future-week planning reference.
 
 ## Current Sprint
 
@@ -17,8 +17,8 @@ Recommended WIP limit: **max 2 active build sites**.
 
 ## Today Snapshot
 
-- **Last Updated:** 2026-03-03
-- **Status:** 🟡 Future-week planning reference (active execution moved to `SPRINT_BOARD_NEXT_2026-03-03.md`).
+- **Last Updated:** 2026-03-06
+- **Status:** 🟡 Future-week planning reference (active execution moved to `SPRINT_BOARD_NEXT_2026-03-09.md`).
 - **Carryover Posture:** Prioritize auditability and evidence-first ops cards before optional feature expansion.
 - **Open Risks:** dependency regressions during updates and scope creep from maintenance requests.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
@@ -160,9 +160,9 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
     - [ ] publish checkpoint note under `docs/reports/2026-03/`
   - Validation: portfolio monitoring script run + report update
 
-- [ ] **Card (4h): Portfolio Ops — Sprint board hygiene + archive rollover**
+- [x] **Card (4h): Portfolio Ops — Sprint board hygiene + archive rollover**
   - Acceptance:
-    - [ ] archive completed board with links to all validation reports
-    - [ ] seed next `SPRINT_BOARD_NEXT` draft with locked queue and risks
-    - [ ] ensure exit criteria and owners are present before kickoff
-  - Validation: board consistency review in `Sprint_Boards` repo
+    - [x] archive completed board with links to all validation reports
+    - [x] seed next `SPRINT_BOARD_NEXT` draft with locked queue and risks
+    - [x] ensure exit criteria and owners are present before kickoff
+  - Validation: board consistency review in `Sprint_Boards` repo and cross-file link check (`README.md`, `SPRINT_BOARD_NEXT_2026-03-03.md`, `SPRINT_BOARD_ARCHIVE_2026-03-02_TO_2026-03-06.md`, `SPRINT_BOARD_NEXT_2026-03-09.md`)

@@ -232,7 +232,7 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 - [x] 2 lunarblood cards shipped with validation evidence
 - [x] 1 hollowpress card shipped with validation evidence
 - [x] portfolio dependency/vuln sweep completed with triage notes
-- [ ] board updated for next sprint candidate queue
+- [x] board updated for next sprint candidate queue
 
 ## Next Sprint Candidate Queue (Proposed)
 
@@ -270,4 +270,9 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
     - [ ] verification checklist includes exact commands and evidence path
   - Validation: command/path verification pass + docs review in `docs/`
 
-- [x] board updated for next sprint candidate queue
+## Validation Report Index (This Sprint)
+
+- `docs/reports/2026-03/SYNTHVEIL_NPM_AUDITABILITY_RESTORE_2026-03-01.md`
+- `docs/reports/2026-03/DEPENDENCY_AUDIT_ADDENDUM_2026-03-01.md`
+- `hollowpress/docs/reports/2026-03/INDEX_QUERY_PERFORMANCE_CHECKPOINT_2026-03-01.md`
+- `docs/reports/2026-02/DEPENDENCY_VULN_TRIAGE_2026-02-21.md`
