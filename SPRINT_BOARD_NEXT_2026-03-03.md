@@ -52,3 +52,9 @@ Recommended WIP limit: **max 2 active build sites**.
 - [ ] Carryover measured in hours
 - [ ] Next week committed load adjusted from carryover
 - [ ] Risks and blocker posture updated before Monday lock
+
+## Execution Updates (2026-03-06)
+
+- **graveyardjokes maintenance delivery completed:** shipped pre-payment intake questionnaire + package-gated checkout flow, added Laravel feature tests and React/Jest coverage, and stabilized Jest config.
+- **Validation evidence:** `php artisan test tests/Feature/WebsiteIntakeTest.php` (pass), `npm test -- --coverage` (17/17 suites, 80/80 tests), `npm run types` (pass).
+- **Reference commit:** `abc8880` on `graveyardjokes/main`.

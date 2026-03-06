@@ -201,6 +201,12 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Validation: `npm audit --json`, `npm run types`, `npm run build`, `npm test -- --runInBand`.
   - Note: Jest ESM/import-meta runtime blocker is resolved and frontend suite now passes (`13/13` suites, `77/77` tests).
 
+- [x] **Card: graveyardjokes — Pre-payment intake questionnaire + checkout gate**
+  - Outcome: implemented `/services/intake` questionnaire flow with database persistence, session unlock state, and package-specific checkout gating on services package pages.
+  - Validation: `php artisan test tests/Feature/WebsiteIntakeTest.php` (passes), `npm test -- --coverage` (17/17 suites, 80/80 tests), `npm run types` (passes).
+  - Path: `graveyardjokes/app/Http/Controllers/WebsiteIntakeController.php`, `graveyardjokes/resources/js/pages/services/intake.tsx`, `graveyardjokes/resources/js/Components/PackagePaymentGate.tsx`, `graveyardjokes/tests/Feature/WebsiteIntakeTest.php`.
+  - Note: Jest config deprecation cleanup and coverage-ignore hygiene included in shipped commit `abc8880`.
+
 - [x] **Card: Portfolio Ops — synthveil remediation wave 1**
   - Outcome: reduced `synthveil` npm findings from `11 high + 1 moderate` to `7 high + 0 moderate`.
   - Validation: `npm audit --json`, `npm run types`, `npm run build`.
