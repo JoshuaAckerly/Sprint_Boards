@@ -16,7 +16,7 @@ Recommended WIP limit: **max 2 active build sites**.
 ## Today Snapshot
 
 - **Last Updated:** 2026-03-08
-- **Status:** 🟢 Lunarblood cards shipped with validation evidence; hollowpress + ops cards remain queued.
+- **Status:** 🟢 Lunarblood + hollowpress delivery cards shipped with validation evidence; ops docs card remains queued.
 - **Carryover Posture:** no locked-card carryover from prior week; keep non-priority requests deferred.
 - **Open Risks:** dependency regressions during updates, deploy contention during service restarts, and scope drift from maintenance requests.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
@@ -48,13 +48,14 @@ Recommended WIP limit: **max 2 active build sites**.
   - Validation: `./vendor/bin/phpunit --filter=Search`, `npm run build`, manual search smoke checks
   - Evidence (2026-03-08): `./vendor/bin/phpunit --filter=Search` (7 tests, 24 assertions, pass), `npm run types` (pass), `npm run build` (pass)
 
-- [ ] **Card (6h): hollowpress — Listing performance pass (query + render stability)**
+- [x] **Card (6h): hollowpress — Listing performance pass (query + render stability)**
   - Owner: Joshua
   - Acceptance:
-    - [ ] `/posts` and `/case-studies` keep pagination/query persistence stable
-    - [ ] no obvious over-fetching/over-render paths in index views
-    - [ ] before/after notes recorded for any query/render tuning
+    - [x] `/posts` and `/case-studies` keep pagination/query persistence stable
+    - [x] no obvious over-fetching/over-render paths in index views
+    - [x] before/after notes recorded for any query/render tuning
   - Validation: `./vendor/bin/phpunit --filter=SearchRelevanceTest`, `npm run build`, manual listing smoke checks
+  - Evidence (2026-03-08): `./vendor/bin/phpunit --filter=SearchRelevanceTest` (9 tests, 33 assertions, pass), `npm run build` (pass), report `hollowpress/docs/reports/2026-03/LISTING_QUERY_RENDER_TUNING_2026-03-08.md`
 
 - [ ] **Card (4h): Portfolio Ops — Monitoring/error review cadence docs refresh**
   - Owner: Joshua
@@ -78,8 +79,8 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Owner: Joshua
 
 ### hollowpress (Secondary) - Target: 1 outcome shipped
-- [ ] **Card (6h): Listing performance pass (query + render stability)**
-  - Status: 🟢 Ready
+- [x] **Card (6h): Listing performance pass (query + render stability)**
+  - Status: 🟢 Done (validated 2026-03-08)
   - Owner: Joshua
 
 ### Portfolio-wide Ops - Target: 1 reliability/docs pass
@@ -107,7 +108,7 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 ## Friday Exit Criteria (2026-03-13)
 
 - [x] 2 lunarblood cards shipped with validation evidence
-- [ ] 1 hollowpress card shipped with validation evidence
+- [x] 1 hollowpress card shipped with validation evidence
 - [ ] monitoring/error cadence docs refreshed with command/path verification
 - [ ] board updated for next sprint candidate queue
 
