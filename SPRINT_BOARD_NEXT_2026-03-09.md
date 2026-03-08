@@ -15,8 +15,8 @@ Recommended WIP limit: **max 2 active build sites**.
 
 ## Today Snapshot
 
-- **Last Updated:** 2026-03-06
-- **Status:** 🟢 Draft seeded for Monday kickoff (owners + validation gates in place).
+- **Last Updated:** 2026-03-08
+- **Status:** 🟢 Lunarblood cards shipped with validation evidence; hollowpress + ops cards remain queued.
 - **Carryover Posture:** no locked-card carryover from prior week; keep non-priority requests deferred.
 - **Open Risks:** dependency regressions during updates, deploy contention during service restarts, and scope drift from maintenance requests.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
@@ -30,21 +30,23 @@ Recommended WIP limit: **max 2 active build sites**.
 
 ## Locked Queue (Sprint Start)
 
-- [ ] **Card (6h): lunarblood — Dashboard data hardening + state coverage**
+- [x] **Card (6h): lunarblood — Dashboard data hardening + state coverage**
   - Owner: Joshua
   - Acceptance:
-    - [ ] key dashboard widgets use production-shape data and avoid null-state errors
-    - [ ] explicit loading, empty, and error states for each widget block
-    - [ ] route smoke checks pass for dashboard and linked quick-action paths
+    - [x] key dashboard widgets use production-shape data and avoid null-state errors
+    - [x] explicit loading, empty, and error states for each widget block
+    - [x] route smoke checks pass for dashboard and linked quick-action paths
   - Validation: `npm run build`, `npm run types`, dashboard route smoke + quick-action click-through
+  - Evidence (2026-03-08): `php artisan test tests/Feature/DashboardControllerTest.php tests/Feature/DashboardSearchTest.php` (11 tests, 85 assertions, pass), `npm run types` (pass), `npm run build` (pass)
 
-- [ ] **Card (6h): lunarblood — Search functionality baseline (phase 1)**
+- [x] **Card (6h): lunarblood — Search functionality baseline (phase 1)**
   - Owner: Joshua
   - Acceptance:
-    - [ ] searchable entity scope documented and implemented (shows + venues)
-    - [ ] no-results and loading states present
-    - [ ] basic edge-case checks pass (empty query, special chars, long query)
+    - [x] searchable entity scope documented and implemented (shows + venues)
+    - [x] no-results and loading states present
+    - [x] basic edge-case checks pass (empty query, special chars, long query)
   - Validation: `./vendor/bin/phpunit --filter=Search`, `npm run build`, manual search smoke checks
+  - Evidence (2026-03-08): `./vendor/bin/phpunit --filter=Search` (7 tests, 24 assertions, pass), `npm run types` (pass), `npm run build` (pass)
 
 - [ ] **Card (6h): hollowpress — Listing performance pass (query + render stability)**
   - Owner: Joshua
@@ -67,12 +69,12 @@ Recommended WIP limit: **max 2 active build sites**.
 RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 
 ### lunarblood (Primary) - Target: 2 outcomes shipped
-- [ ] **Card (6h): Dashboard data hardening + state coverage**
-  - Status: 🟢 Ready
+- [x] **Card (6h): Dashboard data hardening + state coverage**
+  - Status: 🟢 Done (validated 2026-03-08)
   - Owner: Joshua
 
-- [ ] **Card (6h): Search functionality baseline (phase 1)**
-  - Status: 🟢 Ready
+- [x] **Card (6h): Search functionality baseline (phase 1)**
+  - Status: 🟢 Done (validated 2026-03-08)
   - Owner: Joshua
 
 ### hollowpress (Secondary) - Target: 1 outcome shipped
@@ -104,7 +106,7 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 
 ## Friday Exit Criteria (2026-03-13)
 
-- [ ] 2 lunarblood cards shipped with validation evidence
+- [x] 2 lunarblood cards shipped with validation evidence
 - [ ] 1 hollowpress card shipped with validation evidence
 - [ ] monitoring/error cadence docs refreshed with command/path verification
 - [ ] board updated for next sprint candidate queue
