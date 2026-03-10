@@ -15,8 +15,8 @@ Recommended WIP limit: **max 2 active build sites**.
 
 ## Today Snapshot
 
-- **Last Updated:** 2026-03-08
-- **Status:** 🟢 Lunarblood + hollowpress delivery cards shipped with validation evidence; ops docs card remains queued.
+- **Last Updated:** 2026-03-10
+- **Status:** ✅ Sprint execution complete: 4/4 locked cards shipped with validation evidence.
 - **Carryover Posture:** no locked-card carryover from prior week; keep non-priority requests deferred.
 - **Open Risks:** dependency regressions during updates, deploy contention during service restarts, and scope drift from maintenance requests.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
@@ -57,13 +57,14 @@ Recommended WIP limit: **max 2 active build sites**.
   - Validation: `./vendor/bin/phpunit --filter=SearchRelevanceTest`, `npm run build`, manual listing smoke checks
   - Evidence (2026-03-08): `./vendor/bin/phpunit --filter=SearchRelevanceTest` (9 tests, 33 assertions, pass), `npm run build` (pass), report `hollowpress/docs/reports/2026-03/LISTING_QUERY_RENDER_TUNING_2026-03-08.md`
 
-- [ ] **Card (4h): Portfolio Ops — Monitoring/error review cadence docs refresh**
+- [x] **Card (4h): Portfolio Ops — Monitoring/error review cadence docs refresh**
   - Owner: Joshua
   - Acceptance:
-    - [ ] daily and weekly review schedule captured for all active/maintenance sites
-    - [ ] log paths, threshold triggers, and escalation owner listed
-    - [ ] verification checklist includes exact commands and evidence path
-  - Validation: command/path verification pass + docs review in `docs/`
+    - [x] daily and weekly review schedule captured for all active/maintenance sites
+    - [x] log paths, threshold triggers, and escalation owner listed
+    - [x] verification checklist includes exact commands and evidence path
+  - Validation: `bash ./scripts/portfolio-monitoring.sh true`, `bash ./scripts/monitoring-history-summary.sh 7`, docs index refresh in `docs/README.md`
+  - Evidence (2026-03-01): `docs/standards/PORTFOLIO_MONITORING_ERROR_REVIEW_CADENCE.md`, `docs/reports/2026-03/MONITORING_CADENCE_COMMAND_VERIFICATION_2026-03-01.md`, `docs/reports/2026-03/PORTFOLIO_MONITORING_BASELINE_2026-03-01.md`
 
 ## Lane: Now (This Sprint Commitments)
 
@@ -84,8 +85,8 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Owner: Joshua
 
 ### Portfolio-wide Ops - Target: 1 reliability/docs pass
-- [ ] **Card (4h): Monitoring/error review cadence docs refresh**
-  - Status: 🟢 Ready
+- [x] **Card (4h): Monitoring/error review cadence docs refresh**
+  - Status: 🟢 Done (validated 2026-03-01)
   - Owner: Joshua
 
 ## Blocked
@@ -109,19 +110,28 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 
 - [x] 2 lunarblood cards shipped with validation evidence
 - [x] 1 hollowpress card shipped with validation evidence
-- [ ] monitoring/error cadence docs refreshed with command/path verification
-- [ ] board updated for next sprint candidate queue
+- [x] monitoring/error cadence docs refreshed with command/path verification
+- [x] board updated for next sprint candidate queue
 
 ## Next Sprint Candidate Queue (Draft)
 
 - **Card (4h): Portfolio Ops — Service/process health triage for cross-site 502/timeout baseline runs**
   - Goal: restore clean HTTP sampling conditions for portfolio monitoring and confirm app/upstream process health.
+  - Update (2026-03-10): clean HTTP sampling restored in local environment (`200` across all monitored sites, `0%` error rate); process health revalidated.
+  - Evidence: `docs/reports/2026-03/PORTFOLIO_MONITORING_BASELINE_2026-03-10.md`, `docs/reports/2026-03/SERVICE_PROCESS_HEALTH_TRIAGE_2026-03-10.md`
+  - Follow-up focus: reduce first-hit/cold-start p95 spikes in monitoring runs.
 
 - **Card (6h): lunarblood — Search baseline phase 2 (result relevance + UX refinement)**
   - Goal: tighten ranking quality and quick navigation behavior based on phase-1 usage.
+  - Update (2026-03-10): phase-2 relevance and UX refinements shipped (status scoring boost, upcoming-priority ordering, expanded practical synonyms, recent-query chips, `/` focus shortcut).
+  - Validation: `php artisan test tests/Feature/DashboardSearchTest.php` (9 passed, 31 assertions), `npm run -s types`, `npm run -s build`
+  - Evidence: `docs/reports/2026-03/LUNARBLOOD_DASHBOARD_SEARCH_PHASE2_2026-03-10.md`
 
 - **Card (6h): hollowpress — Listing query/index tuning follow-up**
   - Goal: convert observed hot paths into explicit DB/index tuning tasks with measured before/after impact.
+  - Update (2026-03-10): phase-1 index rollout shipped for listing/filter paths (`posts`, `demo_posts`, `case_studies`) with before/after timing evidence.
+  - Validation: `php artisan migrate --force`, `./vendor/bin/phpunit tests/Feature/SearchRelevanceTest.php` (9 passed, 33 assertions), `npm run -s build`
+  - Evidence: `docs/reports/2026-03/HOLLOWPRESS_LISTING_INDEX_ROLLOUT_PHASE1_2026-03-10.md`
 
 - **Card (4h): Portfolio Ops — Dependency/vulnerability remediation wave 2 planning**
   - Goal: assign owners/dates for remaining high findings and define rollback-safe update batches.
