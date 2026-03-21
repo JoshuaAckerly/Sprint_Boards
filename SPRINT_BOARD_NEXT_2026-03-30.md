@@ -16,7 +16,7 @@ Recommended WIP limit: **max 2 active build sites**.
 ## Today Snapshot
 
 - **Last Updated:** 2026-03-21
-- **Status:** 🟢 All sprint commitments complete. Two proposed next-sprint cards also completed early.
+- **Status:** ✅ All sprint commitments and exit criteria complete. Four bonus cards also shipped early.
 - **Carryover Posture:** Continue evidence-first ops discipline; monitor velvetradio P95 trend from checkpoint.
 - **Open Risks:** dependency regressions during updates, velvetradio P95 elevated (578ms — WARN), cold-start outliers inflating monitoring averages.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
@@ -80,8 +80,8 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Status: ✅ Completed (shipped early 2026-03-20)
   - Owner: Joshua
 
-- [ ] **Card (4h): Sprint board hygiene + archive rollover**
-  - Status: 🟢 On track
+- [x] **Card (4h): Sprint board hygiene + archive rollover**
+  - Status: ✅ Completed (2026-03-21)
   - Owner: Joshua
 
 ## Blocked
@@ -133,12 +133,17 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Validation: `composer audit` (×8), `npm audit` (×8) — all clean. Report: `docs/reports/2026-03/DEPENDENCY_AUDIT_2026-03-21.md`.
   - Paths: `composer.lock` (all 8 repos), `auth-system/package-lock.json`.
 
+- [x] **Card: Portfolio Ops — Sprint board hygiene + archive rollover**
+  - Outcome: archived 03/23→03/27 sprint board with validation report links. Seeded `SPRINT_BOARD_NEXT_2026-04-06.md` with 4 locked cards (2 lunarblood UX, 1 hollowpress feature, 1 ops) and proposed 04/13 queue.
+  - Validation: `SPRINT_BOARD_ARCHIVE_2026-03-23_TO_2026-03-27.md` created, `SPRINT_BOARD_NEXT_2026-04-06.md` seeded with acceptance criteria + validation commands + rollback notes.
+  - Paths: `Sprint_Boards/SPRINT_BOARD_ARCHIVE_2026-03-23_TO_2026-03-27.md`, `Sprint_Boards/SPRINT_BOARD_NEXT_2026-04-06.md`.
+
 ## Friday Exit Criteria (2026-04-03)
 
 - [x] 1 lunarblood card shipped with validation evidence
 - [x] 1 hollowpress card shipped with validation evidence
 - [x] cross-site perf checkpoint published with trend analysis
-- [ ] board archived and next sprint candidate queue seeded
+- [x] board archived and next sprint candidate queue seeded
 
 **Bonus (completed ahead of schedule):**
 - [x] lunarblood show detail UX polish (from proposed 4/6 queue)
@@ -146,7 +151,11 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 - [x] velvetradio P95 investigation (from proposed 4/6 queue)
 - [x] monthly dependency audit (from proposed 4/6 queue)
 
-## Next Sprint Candidate Queue (Proposed)
+## Next Sprint Candidate Queue (Promoted)
+
+Promoted to `SPRINT_BOARD_NEXT_2026-04-06.md`. See that board for locked queue and proposed 04/13 follow-up.
+
+## Next Sprint Candidate Queue (Archived — Original Proposed)
 
 - **Sprint Window:** 2026-04-06 → 2026-04-10
 - **Build Sites:** lunarblood (primary), hollowpress (secondary)
