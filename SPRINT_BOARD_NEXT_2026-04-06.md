@@ -16,8 +16,8 @@ Recommended WIP limit: **max 2 active build sites**.
 ## Today Snapshot
 
 - **Last Updated:** 2026-03-21
-- **Status:** 🟡 Draft — pending Monday kickoff gate review.
-- **Carryover Posture:** Continue evidence-first discipline. velvetradio P95 resolved (578ms → 28ms), verify sustained improvement in next monitoring pass.
+- **Status:** ✅ Ready for Monday kickoff. Prior sprint archived: `SPRINT_BOARD_ARCHIVE_2026-03-30_TO_2026-04-03.md`.
+- **Carryover Posture:** Continue evidence-first discipline. velvetradio P95 resolved (578ms → 30ms confirmed warm-path March 21), verify sustained improvement in this sprint’s monitoring pass.
 - **Open Risks:** dependency regressions during updates, scope creep from maintenance requests.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
 

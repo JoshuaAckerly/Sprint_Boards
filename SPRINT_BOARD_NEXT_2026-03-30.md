@@ -17,48 +17,48 @@ Recommended WIP limit: **max 2 active build sites**.
 
 - **Last Updated:** 2026-03-21
 - **Status:** ✅ All sprint commitments and exit criteria complete. Four bonus cards also shipped early.
-- **Carryover Posture:** Continue evidence-first ops discipline; monitor velvetradio P95 trend from checkpoint.
-- **Open Risks:** dependency regressions during updates, velvetradio P95 elevated (578ms — WARN), cold-start outliers inflating monitoring averages.
+- **Carryover Posture:** Continue evidence-first ops discipline; velvetradio P95 fix confirmed (30ms warm-path, March 21).
+- **Open Risks:** dependency regressions during updates, cold-start outliers inflating monitoring averages.
 - **Kickoff Gate:** sprint starts only if each `Now` card has acceptance criteria + validation commands + rollback note.
 
 ## Locked Queue (Sprint Start)
 
-- [ ] **Card (6h): lunarblood — Dashboard search UX follow-up (saved queries + keyboard refinement)**
+- [x] **Card (6h): lunarblood — Dashboard search UX follow-up (saved queries + keyboard refinement)**
   - Owner: Joshua
   - Acceptance:
-    - [ ] preserve recent dashboard search queries for authenticated user sessions
-    - [ ] improve keyboard flow for search submit + result navigation
-    - [ ] maintain existing synonym and validation behavior
+    - [x] preserve recent dashboard search queries for authenticated user sessions
+    - [x] improve keyboard flow for search submit + result navigation
+    - [x] maintain existing synonym and validation behavior
   - Validation: `./vendor/bin/phpunit tests/Feature/DashboardSearchTest.php`, `npm run -s types`, `npm run -s build`
   - Rollback: revert `DashboardController.php` and `dashboard.tsx` changes; remove new test methods from `DashboardSearchTest.php`
   - Note: **Completed early (2026-03-20)** — session-based recent search persistence, arrow-key/Escape/Enter keyboard navigation, and MySQL CURRENT_DATE timezone fix all shipped with 11/11 tests passing.
 
-- [ ] **Card (6h): hollowpress — Listing index rollout phase 1 (safe migrations)**
+- [x] **Card (6h): hollowpress — Listing index rollout phase 1 (safe migrations)**
   - Owner: Joshua
   - Acceptance:
-    - [ ] add first-pass indexes from checkpoint recommendations with rollback-safe migration
-    - [ ] confirm `/posts` and `/case-studies` behavior unchanged after migration
-    - [ ] document before/after timing delta note in March report addendum
+    - [x] add first-pass indexes from checkpoint recommendations with rollback-safe migration
+    - [x] confirm `/posts` and `/case-studies` behavior unchanged after migration
+    - [x] document before/after timing delta note in March report addendum
   - Validation: `php artisan migrate --pretend`, `./vendor/bin/phpunit tests/Feature/SearchRelevanceTest.php`, `npm run -s build`
   - Rollback: `php artisan migrate:rollback --step=1` (migration has proper `down()` method)
   - Note: **Completed prior sprint** — migration `2026_03_10_011500_add_listing_query_indexes.php` already applied with all 4 recommended indexes. 9/9 tests pass, build clean.
 
-- [ ] **Card (4h): Portfolio Ops — Cross-site perf checkpoint refresh**
+- [x] **Card (4h): Portfolio Ops — Cross-site perf checkpoint refresh**
   - Owner: Joshua
   - Acceptance:
-    - [ ] rerun lightweight endpoint timing snapshot on active + maintenance sites
-    - [ ] flag any endpoint with sustained p95 degradation trend
-    - [ ] publish checkpoint note under `docs/reports/2026-03/`
+    - [x] rerun lightweight endpoint timing snapshot on active + maintenance sites
+    - [x] flag any endpoint with sustained p95 degradation trend
+    - [x] publish checkpoint note under `docs/reports/2026-03/`
   - Validation: portfolio monitoring script run + report update
   - Rollback: N/A (read-only monitoring)
-  - Note: **Completed early (2026-03-20)** — warm-path P95 all OK except velvetradio WARN (578ms). Report at `docs/reports/2026-03/CROSS_SITE_PERF_CHECKPOINT_2026-03-20.md`.
+  - Note: **Completed early (2026-03-20)** — warm-path P95 all OK except velvetradio WARN (578ms, subsequently resolved to 30ms on March 21). Report at `docs/reports/2026-03/CROSS_SITE_PERF_CHECKPOINT_2026-03-20.md`.
 
-- [ ] **Card (4h): Portfolio Ops — Sprint board hygiene + archive rollover**
+- [x] **Card (4h): Portfolio Ops — Sprint board hygiene + archive rollover**
   - Owner: Joshua
   - Acceptance:
-    - [ ] archive completed board with links to all validation reports
-    - [ ] seed next `SPRINT_BOARD_NEXT` draft with locked queue and risks
-    - [ ] ensure exit criteria and owners are present before kickoff
+    - [x] archive completed board with links to all validation reports
+    - [x] seed next `SPRINT_BOARD_NEXT` draft with locked queue and risks
+    - [x] ensure exit criteria and owners are present before kickoff
   - Validation: board consistency review in `Sprint_Boards` repo
 
 ## Lane: Now (This Sprint Commitments)
