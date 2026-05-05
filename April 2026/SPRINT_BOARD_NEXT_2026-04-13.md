@@ -15,10 +15,10 @@ Recommended WIP limit: **max 2 active build sites**.
 
 ## Today Snapshot
 
-- **Last Updated:** 2026-04-10 (seeded at sprint close-out)
-- **Status:** 🟡 Sprint not started — opens Monday 2026-04-13
+- **Last Updated:** 2026-04-15
+- **Status:** 🟢 Sprint active — 5 of 6 cards shipped
 - **Carryover Posture:** Clean exit from April 6-10 sprint — no blockers carried over.
-- **Open Risks:** dependency regressions during audit; bundle size regression from form component additions.
+- **Open Risks:** April dependency audit not yet started.
 - **Kickoff Gate:** All `Now` cards have acceptance criteria + validation commands.
 
 ## Locked Queue (Sprint Start)
@@ -83,31 +83,31 @@ Recommended WIP limit: **max 2 active build sites**.
 RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
 
 ### lunarblood (Primary) — Target: 2 shipped outcomes
-- [ ] **Card (6h): Form component library**
-  - Status: ⬜ Not started (opens 2026-04-13)
+- [x] **Card (6h): Form component library**
+  - Status: ✅ Done 2026-04-15 — `Input`, `Select`, `Textarea`, `FormField` components built; `checkout.tsx` (10 inputs), `shows/create.tsx`, `shows/edit.tsx` refactored; `npx tsc --noEmit` + build clean
   - Owner: Joshua
 
-- [ ] **Card (6h): Image optimization + lazy loading**
-  - Status: ⬜ Not started (opens 2026-04-13)
+- [x] **Card (6h): Image optimization + lazy loading**
+  - Status: ✅ Done — `loading="lazy"` + `decoding="async"` confirmed on all venue images in `venues/index.tsx`, `venues/show.tsx`, `venue-detail.tsx`, `listen.tsx`; no raw images without lazy loading
   - Owner: Joshua
 
 ### hollowpress (Secondary) — Target: 2 shipped outcomes
-- [ ] **Card (6h): Breadcrumbs navigation**
-  - Status: ⬜ Not started (opens 2026-04-13)
+- [x] **Card (6h): Breadcrumbs navigation**
+  - Status: ✅ Done — `Breadcrumb.tsx` component built with `aria-label="breadcrumb"` + `aria-current="page"`; integrated in `Posts/Show.tsx` and `CaseStudies/Show.tsx`; build clean
   - Owner: Joshua
 
-- [ ] **Card (6h): Frontend search bar**
-  - Status: ⬜ Not started (opens 2026-04-13)
+- [x] **Card (6h): Frontend search bar**
+  - Status: ✅ Done — debounced search input wired to LIKE query in `Posts/Index.tsx`; author/category/date filters; highlight + snippet extraction; pagination unchanged; build clean
   - Owner: Joshua
 
 ### graveyardjokes (Quick-wins) — Target: 1 bundled card
-- [ ] **Card (3h): Studio page + LinkedIn page**
-  - Status: 🟢 In progress (started 2026-04-10 as part of sprint prep)
+- [x] **Card (3h): Studio page + LinkedIn page**
+  - Status: ✅ Done — `pages/studio.tsx` at `/studio`, `pages/linkedin.tsx` at `/linkedin`, routes in `web.php`, LinkedIn link in `MainLayout.tsx` footer
   - Owner: Joshua
 
 ### Portfolio-wide Ops — Target: 1 audit outcome
 - [ ] **Card (4h): April dependency audit**
-  - Status: ⬜ Not started (opens 2026-04-13)
+  - Status: ⬜ Not started — due by 2026-04-17
   - Owner: Joshua
 
 ## Blocked
@@ -116,13 +116,17 @@ _(none at sprint start)_
 
 ## Done (This Sprint)
 
-_(sprint opens 2026-04-13)_
+- ✅ lunarblood — Form component library (2026-04-15)
+- ✅ lunarblood — Image optimization + lazy loading (2026-04-15)
+- ✅ hollowpress — Breadcrumbs navigation (2026-04-15)
+- ✅ hollowpress — Frontend search bar (2026-04-15)
+- ✅ graveyardjokes — Studio page + LinkedIn page (2026-04-10 / confirmed 2026-04-15_
 
 ## Friday Exit Criteria (2026-04-17)
 
-- [ ] 2 lunarblood cards shipped with validation evidence
-- [ ] 2 hollowpress cards shipped with validation evidence
-- [ ] graveyardjokes Studio + LinkedIn pages live
+- [x] 2 lunarblood cards shipped with validation evidence
+- [x] 2 hollowpress cards shipped with validation evidence
+- [x] graveyardjokes Studio + LinkedIn pages live
 - [ ] April dependency audit published in `docs/reports/2026-04/`
 - [ ] board archived and Sprint 2 candidate queue confirmed
 
