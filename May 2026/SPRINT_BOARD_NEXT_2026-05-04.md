@@ -16,31 +16,31 @@ Recommended WIP limit: **max 2 active build sites**.
 ## Today Snapshot
 
 - **Last Updated:** 2026-05-05
-- **Status:** ✅ Sprint closed 2026-05-05 — 5/6 cards shipped (studio Noteleks deferred to next sprint)
+- **Status:** ✅ Sprint fully closed — 6/6 cards shipped (Noteleks shipped in May 16–22 sprint)
 - **Carryover Posture:** Full carryover from April 27 sprint — 0/5 cards shipped. The April 20 and April 27 sprints were both unstarted (life circumstances, not scope rot). All 5 original cards remain valid and scoped with no changes needed.
 - **Open Risks:** Vitest install may require vite.config.ts restructure; hollowpress newsletter needs DB migration run before testing.
 - **Kickoff Gate:** All `Now` cards have acceptance criteria + validation commands.
 
 ## Locked Queue (Sprint Start)
 
-- [ ] **Card (5h): lunarblood — PHPUnit feature tests: Shows + Venues CRUD**
+- [x] **Card (5h): lunarblood — PHPUnit feature tests: Shows + Venues CRUD** ✅ 2026-05-16
   - Owner: Joshua
   - Acceptance:
-    - [ ] `tests/Feature/ShowTest.php` covers: list, show, create, update, delete + validation failures
-    - [ ] `tests/Feature/VenueTest.php` covers: list, show, create, update, delete + validation failures
-    - [ ] uses `ShowFactory`, `VenueFactory`, `UserFactory` (already exist)
-    - [ ] all tests pass; no regressions in existing suite
+    - [x] `tests/Feature/ShowTest.php` covers: list, show, create, update, delete + validation failures
+    - [x] `tests/Feature/VenueTest.php` covers: list, show, create, update, delete + validation failures
+    - [x] uses `ShowFactory`, `VenueFactory`, `UserFactory` (already exist)
+    - [x] all tests pass; no regressions in existing suite
   - Validation: `./vendor/bin/phpunit --filter ShowTest`, `./vendor/bin/phpunit --filter VenueTest`, `./vendor/bin/phpunit` full suite clean
   - Rollback: delete `ShowTest.php` and `VenueTest.php`; no production code changes
 
-- [ ] **Card (5h): lunarblood — Vitest setup + React component tests**
+- [x] **Card (5h): lunarblood — Vitest setup + React component tests** ✅ 2026-05-16
   - Owner: Joshua
   - Acceptance:
-    - [ ] `vitest`, `@testing-library/react`, `@testing-library/jest-dom`, `jsdom` installed as devDependencies
-    - [ ] `test` block added to `vite.config.ts` (environment: jsdom, setupFiles pointing to test setup)
-    - [ ] tests written for `Input`, `Select`, `Textarea`, `FormField`, `Toast` components
-    - [ ] `npx vitest run` all green
-    - [ ] `npx tsc --noEmit` + `npm run -s build` still clean after config change
+    - [x] `vitest`, `@testing-library/react`, `@testing-library/jest-dom`, `jsdom` installed as devDependencies
+    - [x] `test` block added to `vite.config.ts` (environment: jsdom, setupFiles pointing to test setup)
+    - [x] tests written for `Input`, `Select`, `Textarea`, `FormField`, `Toast` components
+    - [x] `npx vitest run` all green
+    - [x] `npx tsc --noEmit` + `npm run -s build` still clean after config change
   - Validation: `npx vitest run`, `npx tsc --noEmit`, `npm run -s build`
   - Rollback: remove devDependencies + test config + test files; revert `vite.config.ts`
 
@@ -56,23 +56,23 @@ Recommended WIP limit: **max 2 active build sites**.
   - Validation: tsc + build green; form submit → success state rendered
   - Rollback: revert `NewsletterController::subscribe()` to previous version
 
-- [ ] **Card (3h): velvetradio — Streaming architecture document**
+- [x] **Card (3h): velvetradio — Streaming architecture document** ✅ 2026-05-08
   - Owner: Joshua
   - Acceptance:
-    - [ ] document covers: Icecast+Liquidsoap, HLS (self-hosted), and WebRTC options
-    - [ ] each option has: infrastructure requirements, complexity, cost, trade-offs
-    - [ ] clear recommendation with rationale for velvetradio use case
-    - [ ] published to `docs/reports/2026-04/VELVETRADIO_STREAMING_ARCHITECTURE.md`
+    - [x] document covers: Icecast+Liquidsoap, HLS (self-hosted), and WebRTC options
+    - [x] each option has: infrastructure requirements, complexity, cost, trade-offs
+    - [x] clear recommendation with rationale for velvetradio use case
+    - [x] published to `docs/reports/2026-04/VELVETRADIO_STREAMING_ARCHITECTURE.md`
   - Validation: file present and recommendation section complete
   - Rollback: N/A (documentation only)
 
-- [ ] **Card (5h): studio — Noteleks: spear mechanics + room generation**
+- [x] **Card (5h): studio — Noteleks: spear mechanics + room generation** ✅ 2026-05-16
   - Owner: Joshua
   - Acceptance:
-    - [ ] spacebar hold charges spear (visual charge indicator)
-    - [ ] spacebar release throws spear (projectile follows aimed direction)
-    - [ ] new room layout generated procedurally each session (floor/wall tiles)
-    - [ ] browser console clean (no errors on load or during gameplay)
+    - [x] spacebar hold charges spear (visual charge indicator)
+    - [x] spacebar release throws spear (projectile follows aimed direction)
+    - [x] new room layout generated procedurally each session (floor/wall tiles)
+    - [x] browser console clean (no errors on load or during gameplay)
   - Validation: manual browser test — spear fires on spacebar release; room layout differs between page reloads; console clean
   - Rollback: revert spear input handler and room gen files to previous state
 
@@ -110,8 +110,8 @@ RAG legend: `🟢 On track` | `🟠 At risk` | `🔴 Blocked`
   - Owner: Joshua
 
 ### studio (R&D) — Target: 1 gameplay mechanics outcome
-- [ ] **Card (5h): Noteleks — Spear mechanics + room generation**
-  - Status: ⬜ Not started
+- [x] **Card (5h): Noteleks — Spear mechanics + room generation** ✅ 2026-05-16
+  - Status: ✅ Shipped 2026-05-16 (201/201 Noteleks Jest tests pass)
   - Owner: Joshua
 
 ### graveyardjokes (Maintenance + Outreach) — Target: 1 published LinkedIn post
